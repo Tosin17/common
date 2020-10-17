@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IconInputComponent } from './lib/icon-input/icon-input.component';
-import { InputRefDirective } from './lib/common/input-ref.directive';
+import { IconInputModule } from './lib/icon-input.module';
 
 @NgModule({
-  declarations: [AppComponent, IconInputComponent, InputRefDirective],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, IconInputModule],
   providers: [],
   bootstrap: [AppComponent],
 })
