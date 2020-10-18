@@ -1,16 +1,46 @@
 <h1>Common Libraries</h1>
 
-<icon-input icon="supervisor_account">
-    <input type="text"
-           name="user">
-</icon-input>
+<ng-template [ngIf]="false">
+    <icon-input icon="supervisor_account">
+        <input type="text"
+               name="user">
+    </icon-input>
 
-<icon-input icon="search">
-    <input type="text"
-           name="user">
-</icon-input>
+    <icon-input icon="search">
+        <input type="text"
+               name="user">
+    </icon-input>
 
-<icon-input icon="list">
-    <input type="text"
-           name="user">
-</icon-input>
+    <icon-input icon="list">
+        <input type="text"
+               name="user">
+    </icon-input>
+</ng-template>
+
+<div class="container">
+    <app-tab-panel>
+        <app-tab title="Bio Info">
+            <form>
+                <div>Name: <input type="text"></div>
+                <div>Age: <input type="text"></div>
+                <div>Gender: <input type="text"></div>
+            </form>
+        </app-tab>
+
+        <app-tab title="Educational Info">
+            <form>
+                <div>School: <input type="text"></div>
+                <div>Study: <input type="text"></div>
+                <div>Grade: <input type="text"></div>
+            </form>
+        </app-tab>
+
+        <app-tab title="Work Experience">
+            <form>
+                <div>Last Place you Worked: <input type="text"></div>
+                <div>Current Place: <input type="text"></div>
+                <div>Current Role: <input type="text"></div>
+            </form>
+        </app-tab>
+    </app-tab-panel>
+</div>
