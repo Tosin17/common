@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TabComponent implements OnInit {
   @Input() title = '';
+  @Input() selected = false;
   constructor() {}
 
   ngOnInit(): void {}
