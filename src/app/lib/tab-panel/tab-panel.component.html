@@ -1,10 +1,16 @@
 <div class="container tab-panel">
-    <div class="buttons d-flex"
-         *ngIf="tabs">
-        <div *ngFor="let tab of tabs"
-             [class.selected]="tab.selected"
-             (click)="setSelected(tab)"
-             class="button p-3">{{tab.title}}</div>
-    </div>
+    <ng-template #defaultHeaders
+                 let-tabs="tabs">
+        <div class="buttons d-flex"
+             *ngIf="tabs">
+            <div *ngFor="let tab of tabs"
+                 [class.selected]="tab.selected"
+                 (click)="setSelected(tab)"
+                 class="button p-3">{{tab.title}}</div>
+        </div>
+    </ng-template>
+
+    <ng-container *ngTemplateOutlet="headerTmpl || defaultHeaders; context:tabsContext"></ng-container>
+
     <ng-content></ng-content>
 </div>

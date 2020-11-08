@@ -1,5 +1,6 @@
 <h1>Common Libraries</h1>
 
+<!-- Custom inputs -->
 <ng-template [ngIf]="false">
     <icon-input icon="supervisor_account">
         <input type="text"
@@ -17,9 +18,18 @@
     </icon-input>
 </ng-template>
 
+<!-- tab component with projected header -->
+<ng-template #tabHeadings>
+    <button (click)="panel.setSelected(bio)">First</button>
+    <button (click)="panel.setSelected(edu)">Second</button>
+    <button (click)="panel.setSelected(work)">Third</button>
+</ng-template>
+
 <div class="container">
-    <app-tab-panel>
-        <app-tab title="Bio Info">
+    <app-tab-panel #panel
+                   [headerTmpl]="tabHeadings">
+        <app-tab #bio
+                 title="Bio Info">
             <form>
                 <div>Name: <input type="text"></div>
                 <div>Age: <input type="text"></div>
@@ -27,7 +37,8 @@
             </form>
         </app-tab>
 
-        <app-tab title="Educational Info">
+        <app-tab #edu
+                 title="Educational Info">
             <form>
                 <div>School: <input type="text"></div>
                 <div>Study: <input type="text"></div>
@@ -35,7 +46,8 @@
             </form>
         </app-tab>
 
-        <app-tab title="Work Experience">
+        <app-tab #work
+                 title="Work Experience">
             <form>
                 <div>Last Place you Worked: <input type="text"></div>
                 <div>Current Place: <input type="text"></div>
