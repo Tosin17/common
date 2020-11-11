@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { IconInputModule } from './lib/icon-input.module';
 import { TabComponent } from './lib/tab/tab.component';
 import { TabPanelComponent } from './lib/tab-panel/tab-panel.component';
-import { ModalComponent } from './modal/modal.component';
+import { ModalComponent } from './lib/modal/modal.component';
 
 @NgModule({
   declarations: [AppComponent, TabPanelComponent, TabComponent, ModalComponent],
