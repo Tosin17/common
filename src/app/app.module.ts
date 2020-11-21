@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { IconInputModule } from './lib/icon-input.module';
 import { TabComponent } from './lib/tab/tab.component';
 import { TabPanelComponent } from './lib/tab-panel/tab-panel.component';
-import { ModalComponent } from './lib/modal/modal.component';
+import { ModalModule } from './lib/modal/modal.module';
 
 @NgModule({
-  declarations: [AppComponent, TabPanelComponent, TabComponent, ModalComponent],
-  imports: [BrowserModule, AppRoutingModule, IconInputModule],
+  declarations: [AppComponent, TabPanelComponent, TabComponent],
+  imports: [BrowserModule, AppRoutingModule, IconInputModule, ModalModule],
   providers: [],
   bootstrap: [AppComponent],
 })

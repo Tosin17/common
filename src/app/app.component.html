@@ -61,4 +61,13 @@
 
 <hr>
 
+<ng-template #modalTpl>
+    <div class="content">
+        <h2>I'm a modal!</h2>
+        <p>Plz interact with me</p>
+        <button>Close</button> <button>Submit</button>
+    </div>
+</ng-template>
+
 <!-- Custom Modal -->
+<app-modal [body]="modalTpl"></app-modal>
