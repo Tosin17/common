@@ -1,5 +1,7 @@
-<div class="modal-overlay">
-    <div class="modal-body">
+<div class="modal-overlay"
+     (click)="close()">
+    <div class="modal-body"
+         (click)="$event.stopPropagation()">
         <ng-container *ngIf="body else project">
             <ng-container *ngTemplateOutlet="body"></ng-container>
         </ng-container>

@@ -74,5 +74,5 @@
 <ng-template [appOpenOnClick]="openModal">
     <app-modal [body]="modalTpl"></app-modal>
 </ng-template>
-<!-- The above can also be written as this cuz it's a structural directive-->
+<!-- The below is the sugared version of the above cuz `appOpenOnClick` is a structural directive-->
 <!-- <app-modal [body]="modalTpl" *appOpenOnClick="openModal"></app-modal> -->
