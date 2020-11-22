@@ -70,4 +70,9 @@
 </ng-template>
 
 <!-- Custom Modal -->
-<app-modal [body]="modalTpl"></app-modal>
+<button #openModal>Dislay Modal</button>
+<ng-template [appOpenOnClick]="openModal">
+    <app-modal [body]="modalTpl"></app-modal>
+</ng-template>
+<!-- The above can also be written as this cuz it's a structural directive-->
+<!-- <app-modal [body]="modalTpl" *appOpenOnClick="openModal"></app-modal> -->
