@@ -77,3 +77,38 @@
 </ng-template>
 <!-- The below is the sugared version of the above cuz `appOpenOnClick` is a structural directive-->
 <!-- <app-modal [body]="modalTpl" *appOpenOnClick="openModal"></app-modal> -->
+
+<hr>
+
+<!-- Input Masks -->
+<div class="container">
+    <h1>
+        Input Mask Examples
+    </h1>
+
+    <div>
+        <label>Phone:</label>
+        <input au-mask="(999) 999-9999">
+    </div>
+    <div>
+        <label>International Phone Number</label>
+        <input au-mask="+99 999 99 99 99">
+    </div>
+    <div>
+        <label>Credit Card</label>
+        <input au-mask="9999 9999 9999 9999">
+    </div>
+    <div>
+        <label>VAT Number</label>
+        <input au-mask="AA-9999 9999 9999 9999">
+    </div>
+    <div>
+        <label>Date</label>
+        <input au-mask="39/19/9999">
+    </div>
+    <div>
+        <label>Text</label>
+        <input value="ABCD">
+    </div>
+
+</div>
