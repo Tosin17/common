@@ -7,10 +7,17 @@ import { IconInputModule } from './lib/icon-input.module';
 import { TabComponent } from './lib/tab/tab.component';
 import { TabPanelComponent } from './lib/tab-panel/tab-panel.component';
 import { ModalModule } from './lib/modal/modal.module';
+import { InputMaskModule } from './lib/masked-input/masked-input.module';
 
 @NgModule({
   declarations: [AppComponent, TabPanelComponent, TabComponent],
-  imports: [BrowserModule, AppRoutingModule, IconInputModule, ModalModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    IconInputModule,
+    ModalModule,
+    InputMaskModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
