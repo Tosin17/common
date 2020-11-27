@@ -71,12 +71,15 @@
 
 <!-- Custom Modal -->
 <button #openModal>Dislay Modal</button>
-<ng-template [appOpenOnClick]="openModal">
+<!-- <ng-template [appOpenOnClick]="openModal">
     <app-modal [body]="modalTpl"
                [test]="title"></app-modal>
-</ng-template>
+</ng-template> -->
 <!-- The below is the sugared version of the above cuz `appOpenOnClick` is a structural directive-->
-<!-- <app-modal [body]="modalTpl" *appOpenOnClick="openModal"></app-modal> -->
+<app-modal [@fadeInOut]
+           [body]="modalTpl"
+           *appOpenOnClick="openModal">
+</app-modal>
 
 <hr>
 

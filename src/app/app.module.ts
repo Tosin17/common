@@ -8,6 +8,7 @@ import { TabComponent } from './lib/tab/tab.component';
 import { TabPanelComponent } from './lib/tab-panel/tab-panel.component';
 import { ModalModule } from './lib/modal/modal.module';
 import { InputMaskModule } from './lib/masked-input/masked-input.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, TabPanelComponent, TabComponent],
@@ -17,6 +18,7 @@ import { InputMaskModule } from './lib/masked-input/masked-input.module';
     IconInputModule,
     ModalModule,
     InputMaskModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
